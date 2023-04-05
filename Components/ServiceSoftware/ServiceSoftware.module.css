@@ -1,0 +1,86 @@
+.mainTitle {
+    margin-top: 120px;
+    font-size: 48px;
+    color: #111111;
+    font-family: "AcuminPro";
+
+}
+
+.mainTitleDesc {
+    max-width: 80%;
+    margin: auto;
+    font-size: 24px;
+    color: #111111;
+    font-family: "AcuminPro";
+    line-height: 1.7;
+}
+
+.item {
+    background-color: white !important;
+    width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.title {
+    font-size: 23px;
+    color: #111111;
+    font-family: "AcuminPro";
+}
+
+.desc {
+    font-size: 17px;
+    color: #7E7E7E;
+    font-family: "AcuminPro";
+    max-width: 80%;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.itemhov {
+    background-color: #FFB606;
+    top: 0px;
+    left: 0px;
+    z-index: -11;
+    border-radius: 11px;
+    transition: all 0.5s;
+}
+
+.item:hover .itemhov {
+    transform: rotate(-10deg);
+    transition: all 0.5s;
+}
+
+@media (max-width: 768px) {
+    .mainTitle {
+        font-size: 38px;
+    }
+
+    .mainTitleDesc {
+        font-size: 18px;
+    }
+
+    .desc {
+        padding-bottom: 10px !important;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .itemhov {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    .title {
+        font-size: 17px;
+
+    }
+
+    .desc {
+        font-size: 12px;
+        max-width: 85%;
+    }
+}

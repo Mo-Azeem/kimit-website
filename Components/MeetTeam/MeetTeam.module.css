@@ -1,0 +1,12 @@
+.body
+{
+    max-width: 1366px;
+    margin: auto;
+}
+
+.title
+{
+    font-size: 48px;
+    color: #111111;
+    font-family: "semibold";
+}

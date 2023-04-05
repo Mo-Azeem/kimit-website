@@ -1,0 +1,182 @@
+/* .background
+{
+    background-color: #e6e6e6;
+} */
+.bodyy {
+    background-image: url('./clientsnum.png');
+    width: 100%;
+    -webkit-clip-path: polygon(0 30%, 100% 0, 100% 70%, 0% 100%);
+    clip-path: polygon(0 30%, 100% 0, 100% 70%, 0% 100%);
+    background-size: cover;
+    padding-top: 200px;
+
+}
+
+.section {
+    margin-bottom: 100px;
+}
+
+.num {
+
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 33px;
+}
+
+
+
+.number {
+    color: #fff;
+
+}
+
+.num2 {
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 33px;
+}
+
+.numDesc {
+    font-size: 28px;
+    font-family: "semibold";
+    color: #fff;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+.descone {
+    font-size: 48px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.descTwo {
+    line-height: 1.7;
+    font-size: 24px;
+    color: #fff;
+}
+
+.bigNum {
+    font-size: 44px;
+}
+
+@media (max-width: 1000px) {
+    
+
+    .image2 {
+        width: 130px;
+    }
+
+    .num2 {
+        top: 40px;
+        left: 50% !important;
+    }
+
+
+
+    .descone {
+        font-size: 36px;
+    }
+
+    .descTwo {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+
+    .numDesc {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .bodyy {
+        padding-top: 50px !important;
+        padding-bottom: 0px !important;
+        background-image: url('./bgdark.png');
+        -webkit-clip-path: none;
+        clip-path: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .leftnum {
+        padding-left: 150px;
+    }
+}
+
+@media (max-width: 767px) {
+.section
+{
+    text-align: center;
+}
+    /* .descone {
+        margin-top: 150px;
+        font-size: 36px;
+    }
+
+    .descTwo {
+        font-size: 20px;
+    } */
+}
+
+/* @media (max-width: 994px) {
+    .num2
+    {
+        left: 50%;
+    }
+} */
+
+@media only screen and (min-width:768px) and (max-width: 991px) {
+    /* .section
+    {
+        text-align: center;
+    } */
+    .leftnum
+    {
+        padding-top: 50px;
+    }
+    .righttnum
+    {
+        padding-top: 50px;
+
+    }
+}
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+    .num2 {
+        left: 60%;
+    }
+}
+
+@media (max-width: 766px) {
+
+    .number {
+        font-size: 25px;
+    }
+
+    .numDesc {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1300px) {
+
+    .num {
+        top: 40px;
+    }
+
+    .number {
+        font-size: 25px;
+    }
+
+    .numDesc {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:500px) {
+    .bodyy {
+        padding-top: 240px;
+    }
+}

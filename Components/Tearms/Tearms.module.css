@@ -1,0 +1,31 @@
+.containerTerm
+{
+    height: 50%;
+    background-image: url('./tearmbg.jpg');
+    background-size: cover;
+}
+.title
+{
+    font-family: "AcuminPro";
+    font-size: 36px;
+    color: #2A2A2A;
+}
+.date
+{
+    font-family: "AcuminPro";
+    font-size: 24px;
+    color: #FFB606;
+}
+.data
+{
+    padding: 100px 98px 50px 98px;
+    color: #2A2A2A;
+    font-size: 16px;
+    line-height: 1.9;
+}
+@media (max-width: 900px) {
+    .data
+    {
+        padding: 100px 16px 50px 16px;
+    }
+ }

@@ -1,0 +1,109 @@
+.body
+{
+    background-image: url('./background.png');
+    background-size: cover;
+    background-position: center center;
+}
+.bodyOfContact{
+    max-width: 450px;
+}
+.title
+{
+    font-size: 35px;
+    font-family: "AcuminPro";
+    color: #2A2A2A;
+    padding-top: 114px;
+}
+.descTitle
+{
+    font-family: "AcuminPro";
+    color: #2A2A2A;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.label
+{
+    font-size: 14px;
+    font-family: "AcuminPro";
+}
+.textarea
+{
+    height: 135px;
+}
+.contDesc
+{
+    top: 50%;
+    left: 45%;
+}
+.data
+{
+    color: #fff;
+    font-size: 17px;
+    font-family: "AcuminPro";
+   
+}
+.icon
+{
+    width: 16px;
+    height: 16px;
+}
+.data
+{
+    line-height: 1.2;
+}
+@media (max-width: 400px) { 
+    .data
+    {
+        font-size: 12px;
+    }  
+    .icons
+    {
+        margin-top: 0px !important;
+    }
+
+}
+@media (max-width: 450px) {
+    .firstData
+    {
+        padding-top: 0px !important ;
+    }
+    .logo
+    {
+        width: 80px !important;
+    } 
+    .firstData
+    {
+        margin-top: 10px !important;
+    }
+}
+@media (max-width: 500px) { 
+    .data
+    {
+        font-size: 14px;
+        
+    }  
+    .icons
+    {
+        margin-top: 5px !important;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px)  {
+
+   
+    .icons
+    {
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
+    }
+}
+@media (max-width: 992px) { 
+    .bodyOfContact{
+       max-width: 600px !important;
+    }
+}
+/* @media (max-width: 991px) {
+    .mainImg {
+        width: 90% !important;
+        margin: auto;
+    }
+} */

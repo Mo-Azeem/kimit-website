@@ -1,0 +1,85 @@
+.background {
+    background-image: url('./bg-service.png');
+    background-position: center center;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    /* padding-left: 55px; */
+}
+
+.serviceTitle {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "semibold";
+}
+
+.servicedesc {
+    font-size: 24px;
+    font-family: "AcuminPro";
+}
+
+.item {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 34px;
+    padding-bottom: 23px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.icon {
+    padding-bottom: 28px;
+}
+
+.itemTitle {
+    font-size: 32px;
+    margin-top: 28px;
+    font-family: "semibold";
+}
+
+.itemDesc {
+
+    margin-top: 20px;
+    font-family: "AcuminPro";
+
+}
+
+.learnMore {
+    color: #FFB606;
+    font-size: 20px;
+    padding-top: 30px;
+    font-weight: bold;
+    font-family: "semibold";
+}
+
+@media (max-width: 575px) {
+    .servicedesc {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .itemTitle {
+        font-size: 26px;
+    }
+
+    .itemDesc {
+        font-size: 18px;
+        margin-top: 0px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .item
+    {
+        width:80%;
+        margin: auto;
+    }
+    .servicedesc
+    {
+        padding: 15px;
+    }
+    .img
+    {
+        width: 110px;
+    }
+}

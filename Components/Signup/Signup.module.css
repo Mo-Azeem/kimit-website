@@ -1,0 +1,174 @@
+.body {
+    padding-left: 100px;
+    overflow-x: hidden;
+    overflow-Y: hidden;
+    /* max-width: 1366px;
+    margin: auto; */
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.bodyLogin {
+    max-width: 600px;
+    height: 100vh;
+}
+
+.title {
+    font-size: 35px;
+    font-family: "AcuminPro";
+    color: #2A2A2A;
+}
+
+.haveAccount {
+    font-size: 18px;
+    font-family: "AcuminPro";
+    color: #2A2A2A;
+}
+
+.haveAccountLogin {
+    color: #FFB606;
+    cursor: pointer;
+}
+
+.descTitle {
+    font-family: "AcuminPro";
+    color: #2A2A2A;
+    font-size: 18px;
+    max-width: 75%;
+}
+
+.label {
+    font-size: 14px;
+    font-family: "AcuminPro";
+
+}
+
+.textarea {
+    height: 135px;
+}
+
+.contDesc {
+    top: 50%;
+    left: 45%;
+}
+
+.checkbox {
+    font-size: 14px;
+    color: #2A2A2A;
+    font-family: "AcuminPro";
+    width: 80%;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.forget {
+    color: #FFB606;
+    text-decoration: underline;
+}
+
+.checkboxSpan {
+    color: #FFB606;
+}
+
+.or {
+    position: relative;
+    width: 75%;
+}
+
+.or::before {
+    content: "";
+    position: absolute;
+    width: 47%;
+    height: 1px;
+    background-color: #d2cdcd;
+    top: 50%;
+    left: 0px;
+}
+
+.or::after {
+    content: "";
+    position: absolute;
+    width: 47%;
+    height: 1px;
+    background-color: #d2cdcd;
+    top: 50%;
+    right: 0px;
+}
+
+.google {
+    background-color: white;
+    border: 1px solid #d2cdcd;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.googletext {
+    font-size: 16px;
+    color: #111111;
+    padding-left: 10px;
+}
+
+.button {
+    font-size: 16px;
+}
+
+.mainImg {
+    /* max-width: 686px; */
+}
+
+@media (max-width: 992px) {
+    .mainImg {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .mainImg {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .title {
+        font-size: 25px;
+
+    }
+
+    .haveAccount {
+        font-size: 14px;
+
+    }
+
+    .body {
+        padding-left: 60px;
+    }
+
+    .checkbox {
+        font-size: 9px;
+    }
+
+    .button {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .body {
+        padding-left: 30px;
+    }
+
+    .inputStyle {
+        width: 80% !important;
+    }
+
+}

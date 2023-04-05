@@ -1,0 +1,94 @@
+.image {
+    max-width: 270px;
+    max-height: 270px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.background {
+    background-color: rgba(134, 134, 137, 0);
+    transition: all 0.5s;
+}
+
+.containerBg {
+    width: 49%;
+    opacity: 0;
+    /* background-color: red; */
+}
+
+.image:hover .containerBg {
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+.line {
+    width: 2px;
+    height: 30px;
+    background-color: rgb(214, 206, 206);
+}
+
+.image:hover .background {
+    background-color: rgba(134, 134, 137, 0.7);
+    transition: all 0.5s;
+}
+
+.contItems {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.border {
+    border: 1px solid rgb(214, 206, 206);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.border:hover {
+    background-color: #FFB606;
+    transition: all 0.5s;
+}
+
+.title {
+    color: #FFB606;
+    font-size: 24px;
+    font-family: "AcuminPro";
+    width: fit-content;
+    white-space: nowrap;
+    text-align: center;
+    margin: auto;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .title {
+        font-size: 18px;
+    }
+
+    .containerBg {
+        opacity: 0;
+    }
+
+    .bodyItems {
+        padding-top: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .containerBg {
+        width: 58%;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 650px)  {
+    .containerBg {
+        width: 55%;
+    }
+
+}

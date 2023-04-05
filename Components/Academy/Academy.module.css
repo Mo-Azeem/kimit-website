@@ -1,0 +1,113 @@
+.img {
+    padding: 4px;
+    background-color: #FFB606;
+}
+
+.line1 {
+    width: 70px;
+    height: 2px;
+    background-color: #FFB606;
+}
+
+.line2 {
+    width: 35px;
+    height: 2px;
+    background-color: #FFB606;
+}
+
+.line3 {
+    width: 35px;
+    height: 2px;
+    background-color: #FFB606;
+}
+
+.mainTitle {
+    font-size: 28px;
+    color: #FFB606;
+    font-family: "AcuminPro";
+}
+
+.secondTitle {
+    margin-top: 48px;
+    font-size: 42px;
+    color: #111111;
+    font-family: "AcuminPro";
+
+}
+
+.secondTitleDesc {
+    font-size: 18px;
+    margin-top: 24px;
+    font-family: "AcuminPro";
+}
+
+.thiTitle {
+    color: #111111;
+    font-size: 24px;
+    font-family: "AcuminPro";
+}
+
+.thiTitleDesc {
+    font-size: 16px;
+    color: #7E7E7E;
+    font-family: "AcuminPro";
+}
+
+.goWebsite {
+    background-color: #FFB606 !important;
+    padding: 15px 36px 15px 36px;
+    border: 1px solid transparent;
+    color: white;
+    font-size: 18px;
+    margin-top: 42px;
+}
+
+@media (max-width: 575px) {
+    .softwareSec
+    {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    
+    .secondTitle {
+
+        font-size: 30px;
+    }
+
+    .secondTitleDesc {
+        font-size: 16px;
+    }
+
+    .thiTitle {
+        font-size: 20px;
+    }
+
+    .thiTitleDesc {
+        font-size: 14px;
+
+    }
+
+    .goWebsite {
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .mainImg {
+        order: 122 !important;
+        width: 70% !important;
+    }
+
+    .imgDesc {
+        order: 0 !important
+    }
+
+}
+
+@media (max-width: 500px) {
+    .softwareSec {
+        padding-top: 0px !important;
+    }
+
+}

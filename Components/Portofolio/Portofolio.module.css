@@ -1,0 +1,22 @@
+.body {
+    background-image: url('./portofolioBg.png');
+
+}
+
+.contBody {
+    max-width: 1366px;
+    margin: auto;
+}
+
+.title {
+    font-family: "semibold";
+    font-size: 48px;
+    padding-top: 70px;
+    color: #fff;
+}
+
+.titledDesc {
+    font-family: "AcuminPro";
+    font-size: 24px;
+    color: #fff;
+}

@@ -1,0 +1,65 @@
+.body {
+    background-color: #111111;
+    padding: 60px;
+}
+
+.desc {
+    font-family: "AcuminPro";
+    font-size: 16px;
+    color: #fff;
+    margin-top: 22px;
+    /* font-family: "semibold"; */
+}
+
+.data {
+    color: #fff;
+    font-size: 14px;
+    font-family: "AcuminPro";
+
+}
+
+.sec2 {
+    cursor: pointer;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.sec2,
+.copyright {
+    font-family: "AcuminPro";
+    color: #ECECEC;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.icon
+{
+    width: 16px;
+    height: 16px;
+}
+.data
+{
+    line-height: 1.2;
+}
+
+@media (max-width: 500px) {
+    .footerCenter {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .icons {
+        justify-content: end;
+    }
+
+}
+
+@media (max-width: 769px) {
+    .secondMainSec {
+        padding-top: 0px !important;
+    }
+
+}

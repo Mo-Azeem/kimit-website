@@ -38,8 +38,8 @@ export default function Services(props) {
               <img src="../../serviceOne.png" className={`${style.img}`} alt="" />
               <h4 className={`${style.itemTitle}`}>Kimit Software</h4>
               <h5 className={`${style.itemDesc}`}>We offer software agency for companies  to achieve their bussiness as they like</h5>
-              <Link href="#kimitSoftware">
-                <a className={`${style.learnMore}`}>learn more <span> {`>>`} </span> </a>
+              <Link href="#kimitSoftware" className={`${style.learnMore}`}>
+                learn more <span> {`>>`} </span>
               </Link>
             </div>
           </div>
@@ -51,8 +51,8 @@ export default function Services(props) {
               </div>
               <h4 className={`${style.itemTitle}`}> Kimit Academy</h4>
               <h5 className={`${style.itemDesc}`}>we offer education courses in our platform   variety of topics and fields</h5>
-              <Link href="#kimitAcademy">
-                <a className={`${style.learnMore}`}>learn more <span> {`>>`} </span> </a>
+              <Link href="#kimitAcademy" className={`${style.learnMore}`}>
+                learn more <span> {`>>`} </span>
               </Link>
             </div>
           </div>

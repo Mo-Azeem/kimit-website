@@ -40,9 +40,7 @@ export default function Nav(props) {
           <nav style={{ backgroundImage: `url("../../background2.jpg")` }} className="navbar navbar-expand-lg navbar-light position-fixed top-0    w-100">
             <div className="container-fluid text-center text-white">
               <Link href="/" onClick={() => clickhadler("home")}>
-                <a >
                   <img src="../logo.png" alt="logo" />
-                </a>
 
 
               </Link>

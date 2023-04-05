@@ -5,7 +5,6 @@ import { softwareThree } from "../../Svgs/software3";
 import style from "./Software.module.css";
 
 export default function Software({ cms_data }) {
-  console.log(cms_data);
   return (
     <div
       id="software"
@@ -33,7 +32,7 @@ export default function Software({ cms_data }) {
                 </div>
               )}
 
-              <button className={`${style.goWebsite} btn`}>Go Website</button>
+              <a href={cms_data.Link} className={`${style.goWebsite} btn`}>Go Website</a>
             </div>
           </div>
           <div className="col-lg-6 d-flex align-items-center justify-content-center pb-5">

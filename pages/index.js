@@ -21,7 +21,6 @@ export default function HomePage({ cms }) {
     Testimonials,
   } = cms.attributes;
 
-  console.log(Hero)
   return (
     <>
       <Head>
@@ -43,7 +42,7 @@ export default function HomePage({ cms }) {
 
 export async function getStaticProps() {
   const { data: cms } = await fetchHomepage();
-  console.log(cms);
+
   return {
     props: {
       cms,

@@ -171,9 +171,9 @@ export default function Nav(props) {
               </div>
             </div>
           </nav>
-          <div className={`${style.contpos}  h-100 w-100 d-flex align-items-center`}>
-            <Home page={service} />
-          </div>
+          {/* <div className={`${style.contpos}  h-100 w-100 d-flex align-items-center`}>
+            <Home />
+          </div> */}
         </div>
       }
     </>

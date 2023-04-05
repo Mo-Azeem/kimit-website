@@ -26,8 +26,8 @@ const hompageQuery = qs.stringify(
 );
 
 export async function fetchHomepage() {
-  const { STRAPI_API_URL } = process.env;
-  const url = `${STRAPI_API_URL}/homepage?${hompageQuery}`;
+  const { NEXT_PUBLIC_STRAPI_API_URL } = process.env;
+  const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/homepage?${hompageQuery}`;
   return await fetchPageData(url);
 }
 

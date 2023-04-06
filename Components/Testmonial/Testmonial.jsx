@@ -99,6 +99,7 @@ export default function Testmonial({ cms_data }) {
                             className={`${style.rate}`}
                             disabled
                             defaultValue={4}
+                            value={testimonail.Rating}
                           />
                         </div>
                       </div>

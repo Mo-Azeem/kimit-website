@@ -16,7 +16,7 @@ export default function servicePage({ cms }) {
       <SoftwareServiceHero cms_data={Hero} />
       <ServiceSoftware cms_data={OurServices} />
       <NumOfClients cms_data={Stats} />
-      <MeetTeam />
+      {/* <MeetTeam /> */}
       <Portofolio cms_data={OurPortfolio} />
       <Footer />
     </>

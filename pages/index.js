@@ -5,6 +5,7 @@ import Academy from "../Components/Academy/Academy";
 import Contact from "../Components/ContactUs/Contact";
 import Footer from "../Components/Footer/Footer";
 import Home from "../Components/Home/Home";
+import HomeHero from "../Components/HomeHero";
 import Navbar from "../Components/navbar/Navbar";
 import Services from "../Components/Services/Services";
 import Software from "../Components/Software/Software";
@@ -28,12 +29,13 @@ export default function HomePage({ cms }) {
         <meta name="description" content="...." />
       </Head>
       <Navbar page={"home"} />
-      <Home />
-      <Services setBg={"dark"} cms_data={WhatWeOffer}/>
-      <About cms_data={AboutKimit}/>
-      <Software cms_data={KimitSoftware}/>
-      <Academy cms_data={KimitAcademy}/>
-      <Testmonial cms_data={Testimonials}/>
+      <HomeHero cms_data={Hero} />
+      {/* <Home /> */}
+      <Services setBg={"dark"} cms_data={WhatWeOffer} />
+      <About cms_data={AboutKimit} />
+      <Software cms_data={KimitSoftware} />
+      <Academy cms_data={KimitAcademy} />
+      <Testmonial cms_data={Testimonials} />
       <Contact />
       <Footer />
     </>

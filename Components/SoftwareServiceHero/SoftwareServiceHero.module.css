@@ -59,6 +59,15 @@
   /* padding-left: 100px; */
 }
 
+.primary_btn {
+  background-color: #FFB606 !important;
+  padding: 10px 30px;
+  border: 1px solid transparent;
+  color: white;
+  font-size: 18px;
+  margin-top: 57px;
+}
+
 @media (max-width: 450px) {
   .titleSoftware {
     font-size: 38px;

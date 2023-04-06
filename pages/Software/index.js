@@ -9,7 +9,6 @@ import SoftwareServiceHero from "../../Components/SoftwareServiceHero";
 import { fetchSoftwareServices } from "../../services";
 
 export default function servicePage({ cms }) {
-  console.log(cms)
   const { Hero, OurServices, Stats, OurPortfolio } = cms;
   return (
     <>

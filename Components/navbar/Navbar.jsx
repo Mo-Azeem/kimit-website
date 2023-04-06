@@ -104,11 +104,7 @@ export default function Nav(props) {
           </nav>
 
           {page == "Software" ?
-            <div style={{ backgroundImage: service ? `url("../../homeSoftware.png")` : `` }} className={` ${style.background} w-100 `}>
-              <div className={`h-100 w-100 d-flex align-items-center`}>
-                <Home page={service} />
-              </div>
-            </div>
+            null
             : ""}
         </div>
         :
@@ -172,7 +168,7 @@ export default function Nav(props) {
             </div>
           </nav>
           {/* <div className={`${style.contpos}  h-100 w-100 d-flex align-items-center`}>
-            <Home />
+            <Home page={service} />
           </div> */}
         </div>
       }

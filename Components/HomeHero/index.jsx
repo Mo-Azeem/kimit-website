@@ -22,7 +22,7 @@ export default function Home({cms_data}) {
   }
   return (
     <div className={`${style.contpos}  h-100 w-100 d-flex align-items-center`} style={{
-        backgroundImage: `url('../../background2.jpg')`,
+        backgroundImage: `url('../../background.png')`,
     }}>
       <div className={` ${style.home} container pb-5 mt-5 `}>
         <div className="row gy-3 mt-2  w-100  pb-5">

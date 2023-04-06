@@ -4,7 +4,6 @@ import About from "../Components/About/About";
 import Academy from "../Components/Academy/Academy";
 import Contact from "../Components/ContactUs/Contact";
 import Footer from "../Components/Footer/Footer";
-import Home from "../Components/Home/Home";
 import HomeHero from "../Components/HomeHero";
 import Navbar from "../Components/navbar/Navbar";
 import Services from "../Components/Services/Services";

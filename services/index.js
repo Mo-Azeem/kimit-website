@@ -25,9 +25,29 @@ const hompageQuery = qs.stringify(
   }
 );
 
+const softwareServicesQuery = qs.stringify(
+  {
+    populate: [
+      "Hero",
+      "OurServices.Services.Image",
+      "Stats.Stats",
+      "OurPortfolio.PortfolioProjects.Image",
+    ],
+  },
+  {
+    encodeValuesOnly: true,
+  }
+);
+
 export async function fetchHomepage() {
   const { NEXT_PUBLIC_STRAPI_API_URL } = process.env;
   const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/homepage?${hompageQuery}`;
+  return await fetchPageData(url);
+}
+
+export async function fetchSoftwareServices() {
+  const { NEXT_PUBLIC_STRAPI_API_URL } = process.env;
+  const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/software-service?${softwareServicesQuery}`;
   return await fetchPageData(url);
 }
 

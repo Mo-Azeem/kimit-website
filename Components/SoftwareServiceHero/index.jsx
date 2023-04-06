@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import style from "./SoftwareServiceHero.module.css";
 import { useRouter } from "next/router";
 
-export default function Home() {
+export default function Home({cms_data}) {
   const router = useRouter();
 
   function onScroll() {
@@ -20,6 +20,7 @@ export default function Home() {
   function navigate(to) {
     router.push(`./${to}`);
   }
+  const {firstWord, highlightedWord, rest} = splitTitle(cms_data.Title);
   return (
     <div
       className={`${style.contpos}  h-100 w-100 d-flex align-items-center`}
@@ -34,27 +35,21 @@ export default function Home() {
             <div className="des w-100">
               <div className="">
                 <span className={`${style.titleSoftware} ${style.firstTitle}`}>
-                  The <span className={`${style.spanSoft}`}>Best</span> Place To{" "}
+                  {firstWord} <span className={`${style.spanSoft}`}>{highlightedWord}</span> {rest}
                 </span>
-                <br />
-                <span
-                  className={`${style.titleSoftware} ${style.secondTitle} `}
-                >
-                  {" "}
-                  Start Your Business
-                </span>
+                
               </div>
               <h4 className={`${style.titleDescSoftware} ${style.titleDesc}`}>
                 {" "}
                 There are many variations of passages of Lorem Ipsum <br />
                 but the majority have suffered alteration
               </h4>
-              <button
-                onClick={() => navigate("Academy")}
+              <a
+              href={cms_data.Link}
                 className={`${style.primary_btn} signupBtn btn ms-0 `}
               >
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
           <div className="col-lg-6  ">
@@ -70,4 +65,18 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+
+const splitTitle = (title) => {
+  const words = title.split(" ");
+  const firstWord = words[0];
+  const highlightedWord = words[1];
+  const rest = words.slice(2).join(" ");
+  
+  return {
+    firstWord,
+    highlightedWord,
+    rest
+  }
 }

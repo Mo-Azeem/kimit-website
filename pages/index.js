@@ -19,7 +19,7 @@ export default function HomePage({ cms }) {
     KimitSoftware,
     KimitAcademy,
     Testimonials,
-  } = cms.attributes;
+  } = cms?.attributes;
 
   return (
     <>

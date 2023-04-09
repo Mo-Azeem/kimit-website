@@ -28,7 +28,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      cms: cms.data.attributes,
+      cms: cms?.data?.attributes,
     },
   };
 }

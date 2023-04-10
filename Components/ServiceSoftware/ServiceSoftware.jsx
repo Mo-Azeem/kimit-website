@@ -4,14 +4,14 @@ import style from "./ServiceSoftware.module.css";
 export default function ServiceSoftware({ cms_data }) {
   return (
     <div className="text-center pt-5 mb-5">
-      <h2 className={`${style.mainTitle}`}>{cms_data.Title}</h2>
+      <h2 className={`${style.mainTitle}`}>{cms_data?.Title}</h2>
       <div className={`${style.mainTitleDescCont}`}>
-        <h6 className={`${style.mainTitleDesc} pb-5`}>{cms_data.Paragraph}</h6>
+        <h6 className={`${style.mainTitleDesc} pb-5`}>{cms_data?.Paragraph}</h6>
       </div>
       <div className="container ">
-        {cms_data.Services?.length > 0 && (
+        {cms_data?.Services?.length > 0 && (
           <div className="row gy-5 gx-0">
-            {cms_data.Services.map((service, index) => (
+            {cms_data?.Services?.map((service, index) => (
               <ServiceCard key={index} service={service} />
             ))}
           </div>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import style from "./SoftwareServiceHero.module.css";
 import { useRouter } from "next/router";
 
-export default function Home({cms_data}) {
+export default function Home({ cms_data }) {
   const router = useRouter();
 
   function onScroll() {
@@ -17,10 +17,7 @@ export default function Home({cms_data}) {
     window.addEventListener("scroll", onScroll, { passive: true });
   }, []);
 
-  function navigate(to) {
-    router.push(`./${to}`);
-  }
-  const {firstWord, highlightedWord, rest} = splitTitle(cms_data.Title);
+  const { firstWord, highlightedWord, rest } = splitTitle(cms_data?.Title);
   return (
     <div
       className={`${style.contpos}  h-100 w-100 d-flex align-items-center`}
@@ -35,17 +32,16 @@ export default function Home({cms_data}) {
             <div className="des w-100">
               <div className="">
                 <span className={`${style.titleSoftware} ${style.firstTitle}`}>
-                  {firstWord} <span className={`${style.spanSoft}`}>{highlightedWord}</span> {rest}
+                  {firstWord}{' '}
+                  <span className={`${style.spanSoft}`}>{highlightedWord}</span>{' '}
+                  {rest}
                 </span>
-                
               </div>
               <h4 className={`${style.titleDescSoftware} ${style.titleDesc}`}>
-                {" "}
-                There are many variations of passages of Lorem Ipsum <br />
-                but the majority have suffered alteration
+                {cms_data?.Paragraph}
               </h4>
               <a
-              href={cms_data.Link}
+                href={cms_data?.Link}
                 className={`${style.primary_btn} signupBtn btn ms-0 `}
               >
                 Get Started
@@ -67,16 +63,15 @@ export default function Home({cms_data}) {
   );
 }
 
-
 const splitTitle = (title) => {
-  const words = title.split(" ");
-  const firstWord = words[0];
-  const highlightedWord = words[1];
-  const rest = words.slice(2).join(" ");
-  
+  const words = title?.split(' ');
+  const firstWord = words?.length > 0 ? words[0] : null;
+  const highlightedWord = words?.length > 0 ? words[1] : null;
+  const rest = words?.length > 0 ? words.slice(2).join(' ') : null;
+
   return {
     firstWord,
     highlightedWord,
-    rest
-  }
-}
+    rest,
+  };
+};

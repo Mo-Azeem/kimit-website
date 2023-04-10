@@ -10,9 +10,9 @@ export default function NumOfClients({ cms_data }) {
             <div className="col-md-5 d-flex align-items-center">
               <div className="desc d-flex align-items-center  h-100">
                 <div>
-                  <h2 className={`${style.descone}`}>{cms_data.Title}</h2>
+                  <h2 className={`${style.descone}`}>{cms_data?.Title}</h2>
                   <h6 className={`${style.descTwo} pt-4`}>
-                    {cms_data.Paragraph}
+                    {cms_data?.Paragraph}
                   </h6>
                 </div>
               </div>
@@ -20,21 +20,21 @@ export default function NumOfClients({ cms_data }) {
 
             <div className={`${style.numsSec} col-md-7 `}>
               <div className="row g-0">
-                {cms_data.Stats?.length > 0 && (
+                {cms_data?.Stats?.length > 0 && (
                   <div className={`col-md-6 ${style.leftnum} `}>
                     <div className="d-flex flex-column">
-                      {cms_data.Stats[0] && (
+                      {cms_data?.Stats[0] && (
                         <div className="img text-center position-relative">
                           <div className="image">
                             <img src="../../num1.png" alt="" />
                           </div>
                           <div className={` ${style.num} position-absolute `}>
                             <h2 className={`${style.number}`}>
-                              {cms_data.Stats[0].Amount}
+                              {cms_data?.Stats[0]?.Amount}
                             </h2>
                           </div>
                           <h6 className={`${style.numDesc}`}>
-                            {cms_data.Stats[0].Name}
+                            {cms_data?.Stats[0]?.Name}
                           </h6>
                         </div>
                       )}
@@ -44,11 +44,11 @@ export default function NumOfClients({ cms_data }) {
                           <img src="../../num1.png" alt="" />
                           <div className={` ${style.num} position-absolute `}>
                             <h2 className={`${style.number}`}>
-                              {cms_data.Stats[1].Amount}
+                              {cms_data?.Stats[1]?.Amount}
                             </h2>
                           </div>
                           <h6 className={`${style.numDesc}`}>
-                            {cms_data.Stats[1].Name}
+                            {cms_data?.Stats[1]?.Name}
                           </h6>
                         </div>
                       )}
@@ -56,10 +56,10 @@ export default function NumOfClients({ cms_data }) {
                   </div>
                 )}
 
-                {cms_data.Stats?.length > 2 && (
+                {cms_data?.Stats?.length > 2 && (
                   <div className={`col-md-6 ${style.righttnum}`}>
                     <div className="d-flex flex-column ">
-                      {cms_data.Stats[2] && (
+                      {cms_data?.Stats[2] && (
                         <div
                           className={`${style.img2} text-center position-relative `}
                         >
@@ -70,24 +70,24 @@ export default function NumOfClients({ cms_data }) {
                           />
                           <div className={` ${style.num2} position-absolute `}>
                             <h2 className={`${style.number} ${style.bigNum} `}>
-                              {cms_data.Stats[2].Amount}
+                              {cms_data?.Stats[2]?.Amount}
                             </h2>
                           </div>
                           <h6 className={`${style.numDesc}`}>
-                            {cms_data.Stats[2].Name}
+                            {cms_data?.Stats[2]?.Name}
                           </h6>
                         </div>
                       )}
-                      {cms_data.Stats[3] && (
+                      {cms_data?.Stats[3] && (
                         <div className="img text-center position-relative mt-2 pb-5">
                           <img src="../../num1.png" alt="" />
                           <div className={` ${style.num} position-absolute `}>
                             <h2 className={`${style.number} `}>
-                              {cms_data.Stats[3].Amount}
+                              {cms_data?.Stats[3]?.Amount}
                             </h2>
                           </div>
                           <h6 className={`${style.numDesc} pb-5`}>
-                            {cms_data.Stats[3].Name}
+                            {cms_data?.Stats[3]?.Name}
                           </h6>
                         </div>
                       )}

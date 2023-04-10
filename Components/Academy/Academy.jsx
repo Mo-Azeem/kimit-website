@@ -23,25 +23,25 @@ export default function Academy({ cms_data }) {
           </div>
           <div id="kimitAcademy" className={`${style.imgDesc} col-lg-6`}>
             <div className={`${style.itemImg} w-100 `}>
-              <h4 className={`${style.mainTitle}`}>{cms_data.Name}</h4>
+              <h4 className={`${style.mainTitle}`}>{cms_data?.Name}</h4>
               <div className="d-flex">
                 <div className={`${style.line1} me-2`}></div>
                 <div className={`${style.line2} me-2`}></div>
                 <div className={`${style.line3}`}></div>
               </div>
-              <h2 className={`${style.secondTitle}`}>{cms_data.Title}</h2>
+              <h2 className={`${style.secondTitle}`}>{cms_data?.Title}</h2>
               <p className={`${style.secondTitleDesc} text-muted`}>
-                {cms_data.Paragraph}
+                {cms_data?.Paragraph}
               </p>
               {cms_data?.AcademyFeatures?.length > 0 && (
                 <div className="mt-5">
-                  {cms_data.AcademyFeatures.map((item, index) => (
+                  {cms_data?.AcademyFeatures?.map((item, index) => (
                     <AcademyListItem key={index} item={item} />
                   ))}
                 </div>
               )}
 
-              <a href={cms_data.Link} className={`${style.goWebsite} btn mb-5`}>
+              <a href={cms_data?.Link} className={`${style.goWebsite} btn mb-5`}>
                 Go Website
               </a>
             </div>
@@ -67,8 +67,8 @@ function AcademyListItem({ item }) {
         )}
       </div>
       <div className="imgDesc">
-        <h4 className={`${style.thiTitle}`}>{item.Title}</h4>
-        <h6 className={`${style.thiTitleDesc}`}>{item.Paragraph}</h6>
+        <h4 className={`${style.thiTitle}`}>{item?.Title}</h4>
+        <h6 className={`${style.thiTitleDesc}`}>{item?.Paragraph}</h6>
       </div>
     </div>
   );

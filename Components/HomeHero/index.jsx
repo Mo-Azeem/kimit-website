@@ -30,21 +30,21 @@ export default function Home({cms_data}) {
             <div className="des w-100">
                 <div>
                   <span className={`${style.title} ${style.firstTitle}`}>
-                    {cms_data.White_Title}
+                    {cms_data?.White_Title}
                   </span>
                   <br />
                   <span className={`${style.title} ${style.secondTitle} `}>
-                    {cms_data.Yellow_Title}
+                    {cms_data?.Yellow_Title}
                   </span>
                 </div>
 
                 <h4 className={`${style.titleDesc}`}>
-                  {cms_data.Paragraph}
+                  {cms_data?.Paragraph}
                 </h4>
            
               <a
                 // onClick={() => navigate("Academy")}
-                href={cms_data.Link}
+                href={cms_data?.Link}
                 className={`${style.primary_btn} signupBtn btn ms-0 `}
               >
                 Get Started

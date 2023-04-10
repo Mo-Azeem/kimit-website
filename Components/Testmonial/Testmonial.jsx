@@ -43,9 +43,9 @@ export default function Testmonial({ cms_data }) {
   return (
     <div id="testmonial" className={`${style.body} pb-5 mt-5`}>
       <div className={`${style.ContBody}`}>
-        <h2 className={`${style.title} text-center pt-5`}>{cms_data.Title}</h2>
-        <p className={`${style.titleDesc} text-center`}>{cms_data.Paragraph}</p>
-        {cms_data.TestimonialCards?.length > 0 && (
+        <h2 className={`${style.title} text-center pt-5`}>{cms_data?.Title}</h2>
+        <p className={`${style.titleDesc} text-center`}>{cms_data?.Paragraph}</p>
+        {cms_data?.TestimonialCards?.length > 0 && (
           <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -67,7 +67,7 @@ export default function Testmonial({ cms_data }) {
             // onSwiper={(swiper) => console.log(swiper)}
             // onSlideChange={() => console.log("slide change")}
           >
-            {cms_data.TestimonialCards.map((testimonail, i) => {
+            {cms_data?.TestimonialCards?.map((testimonail, i) => {
               const customerImagePath =
                 testimonail?.CustomerImage?.data?.attributes?.url;
               const customerImageUrl = `${NEXT_PUBLIC_STRAPI_API_URL}${customerImagePath}`;
@@ -93,7 +93,7 @@ export default function Testmonial({ cms_data }) {
                         </div>
                         <div className={`col-6`}>
                           <h2 className={`${style.customer}`}>
-                            {testimonail.Name}
+                            {testimonail?.Name}
                           </h2>
                           <Rate
                             className={`${style.rate}`}
@@ -119,18 +119,18 @@ export default function Testmonial({ cms_data }) {
                         </div>
                         <div className={`col-12 text-center mt-5`}>
                           <h2 className={`${style.customer}`}>
-                            {testimonail.Name}
+                            {testimonail?.Name}
                           </h2>
                           <Rate
                             className={`${style.rate}`}
                             disabled
                             defaultValue={4}
-                            value={testimonail.Rating}
+                            value={testimonail?.Rating}
                           />
                         </div>
                       </div>
                       <p className={`${style.customerComment}`}>
-                        {testimonail.Paragraph}
+                        {testimonail?.Paragraph}
                       </p>
                     </div>
                   </div>

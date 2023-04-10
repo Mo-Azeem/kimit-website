@@ -12,15 +12,7 @@ import Testmonial from "../Components/Testmonial/Testmonial";
 import { fetchHomepage } from "../services";
 
 export default function HomePage({ cms }) {
-  const {
-    Hero,
-    WhatWeOffer,
-    AboutKimit,
-    KimitSoftware,
-    KimitAcademy,
-    Testimonials,
-  } = cms.attributes;
-
+  
   return (
     <>
       <Head>
@@ -29,11 +21,11 @@ export default function HomePage({ cms }) {
       </Head>
       <Navbar page={"home"} />
       <Home />
-      <Services setBg={"dark"} cms_data={WhatWeOffer}/>
-      <About cms_data={AboutKimit}/>
-      <Software cms_data={KimitSoftware}/>
-      <Academy cms_data={KimitAcademy}/>
-      <Testmonial cms_data={Testimonials}/>
+      <Services setBg={"dark"} cms_data={cms?.WhatWeOffer} />
+      <About cms_data={cms?.AboutKimit} />
+      <Software cms_data={cms?.KimitSoftware} />
+      <Academy cms_data={cms?.KimitAcademy} />
+      <Testmonial cms_data={cms?.Testimonials} />
       <Contact />
       <Footer />
     </>
@@ -41,11 +33,11 @@ export default function HomePage({ cms }) {
 }
 
 export async function getStaticProps() {
-  const { data: cms } = await fetchHomepage();
-
+  const { data } = await fetchHomepage();
+  const cms = data?.attributes ? data?.attributes : null;
   return {
     props: {
-      cms,
+      cms
     },
   };
 }

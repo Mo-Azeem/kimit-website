@@ -26,9 +26,9 @@ export default function Services(props) {
   const { cms_data } = props;
   return (
     <div id="service" className={`${style.background} w-100 h-100`}>
-      <h2 className={`${style.serviceTitle} text-center `}>{cms_data.Title}</h2>
+      <h2 className={`${style.serviceTitle} text-center `}>{cms_data?.Title}</h2>
       <h4 className={`${style.servicedesc} text-center`}>
-        {cms_data.Paragraph}
+        {cms_data?.Paragraph}
       </h4>
       <div className="container mt-5">
         {cms_data?.Services?.length > 0 && (

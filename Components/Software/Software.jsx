@@ -14,15 +14,15 @@ export default function Software({ cms_data }) {
         <div className="row gx-5">
           <div className="col-lg-6">
             <div className={`${style.itemImg} w-100 `}>
-              <h4 className={`${style.mainTitle}`}>{cms_data.Name}</h4>
+              <h4 className={`${style.mainTitle}`}>{cms_data?.Name}</h4>
               <div className="d-flex">
                 <div className={`${style.line1} me-2`}></div>
                 <div className={`${style.line2} me-2`}></div>
                 <div className={`${style.line3}`}></div>
               </div>
-              <h2 className={`${style.secondTitle}`}>{cms_data.Title}</h2>
+              <h2 className={`${style.secondTitle}`}>{cms_data?.Title}</h2>
               <p className={`${style.secondTitleDesc} text-muted`}>
-                {cms_data.Paragraph}
+                {cms_data?.Paragraph}
               </p>
               {cms_data?.Services?.length > 0 && (
                 <div className="mt-5">
@@ -32,7 +32,7 @@ export default function Software({ cms_data }) {
                 </div>
               )}
 
-              <a href={cms_data.Link} className={`${style.goWebsite} btn`}>Go Website</a>
+              <a href={cms_data?.Link} className={`${style.goWebsite} btn`}>Go Website</a>
             </div>
           </div>
           <div className="col-lg-6 d-flex align-items-center justify-content-center pb-5">
@@ -61,8 +61,8 @@ function ServiceCard({ service }) {
         </div>
       )}
       <div className="imgDesc">
-        <h4 className={`${style.thiTitle}`}>{service.Title}</h4>
-        <h6 className={`${style.thiTitleDesc}`}>{service.Paragraph}</h6>
+        <h4 className={`${style.thiTitle}`}>{service?.Title}</h4>
+        <h6 className={`${style.thiTitleDesc}`}>{service?.Paragraph}</h6>
       </div>
     </div>
   );

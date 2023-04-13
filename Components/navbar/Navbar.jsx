@@ -92,12 +92,12 @@ export default function Nav(props) {
 
 
                 <div className=' d-flex w-100 btnsToggle pt-3 pb-3 justify-content-center '>
-                  <button onClick={() => navigate("Login")} className={`${style.loginBtn} btn`}>Log in</button>
+                  {/* <button onClick={() => navigate("Login")} className={`${style.loginBtn} btn`}>Log in</button> */}
                   <button onClick={() => navigate("Academy")} className='signupBtn btn '>Academy</button>
                 </div>
               </div>
               <div className='btnsNav d-flex '>
-                <button onClick={() => navigate("Login")} className={`${style.loginBtn} btn`}>Log in</button>
+                {/* <button onClick={() => navigate("Login")} className={`${style.loginBtn} btn`}>Log in</button> */}
                 <button onClick={() => navigate("Academy")} className='signupBtn btn '>Academy</button>
               </div>
             </div>
@@ -157,12 +157,12 @@ export default function Nav(props) {
                   </li>
                 </ul>
                 <div className=' d-flex w-100 btnsToggle pt-3 pb-3 justify-content-center '>
-                  <button onClick={() => navigate("Login")} className={`${style.loginBtn} btn`}>Log in</button>
+                  {/* <button onClick={() => navigate("Login")} className={`${style.loginBtn} btn`}>Log in</button> */}
                   <button onClick={() => navigate("Academy")} className='signupBtn btn '>Academy</button>
                 </div>
               </div>
               <div className='btnsNav d-flex '>
-                <button onClick={() => navigate("Login")} className={`${style.loginBtn} btn`}>Log in</button>
+                {/* <button onClick={() => navigate("Login")} className={`${style.loginBtn} btn`}>Log in</button> */}
                 <button onClick={() => navigate("Academy")} className='signupBtn btn '>Academy</button>
               </div>
             </div>

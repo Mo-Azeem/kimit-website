@@ -11,33 +11,7 @@ import "swiper/css/scrollbar";
 ``;
 
 export default function Testmonial({ cms_data }) {
-  const customer = [
-    {
-      name: "Lena Mohamed",
-      rate: 4,
-      Comment:
-        " the team working very good, achieve my service and my dreams about my business solution from branding to developing my platforms as I want to achieve ",
-    },
-    {
-      name: "Lena Mohamed",
-      rate: 4,
-      Comment:
-        " the team working very good, achieve my service and my dreams about my business solution from branding to developing my platforms as I want to achieve ",
-    },
-    {
-      name: "Lena Mohamed",
-      rate: 4,
-      Comment:
-        " the team working very good, achieve my service and my dreams about my business solution from branding to developing my platforms as I want to achieve ",
-    },
-    {
-      name: "Lena Mohamed",
-      rate: 4,
-      Comment:
-        " the team working very good, achieve my service and my dreams about my business solution from branding to developing my platforms as I want to achieve ",
-    },
-  ];
-
+  
   const NEXT_PUBLIC_STRAPI_API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
 
   return (

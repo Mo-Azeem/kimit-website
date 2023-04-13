@@ -16,6 +16,8 @@
 .servicedesc {
     font-size: 24px;
     font-family: "AcuminPro";
+    max-inline-size: 49ch;
+    margin: auto;
 }
 
 .item {

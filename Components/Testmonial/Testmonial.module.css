@@ -2,6 +2,7 @@
     background-image: url('./customerSay.png');
     background-position: center center;
     background-size: cover;
+    padding-top: 40px;
 }
 .ContBody
 {
@@ -33,6 +34,8 @@
 
 .titleDesc {
     font-size: 24px;
+    max-inline-size: 49ch;
+    margin: auto;
     font-family: "AcuminPro";
     color: #111111;
 }

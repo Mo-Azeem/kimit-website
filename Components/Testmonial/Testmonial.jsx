@@ -61,6 +61,7 @@ export default function Testmonial({ cms_data }) {
                               <img
                                 src={customerImageUrl}
                                 className="w-100 h-100"
+                                alt={testimonail?.Name + ' image'}
                               />
                             </div>
                           </div>

@@ -8,12 +8,12 @@ export default function Home({ cms_data }) {
   function onScroll() {
     let element = document.querySelector(".navbar");
     if (element) {
-      element.style.backgroundImage = "url('../../background2.jpg')";
+      element.style.backgroundImage = "url('../../background2.webp')";
     }
   }
   useEffect(() => {
     let element = document.querySelector(".navbar");
-    element.style.backgroundImage = "url('../../background2.jpg')";
+    element.style.backgroundImage = "url('../../background2.webp')";
     window.addEventListener("scroll", onScroll, { passive: true });
   }, []);
 

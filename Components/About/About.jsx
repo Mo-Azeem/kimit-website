@@ -14,7 +14,7 @@ export default function About({ cms_data }) {
             >
               <img
                 className={`${style.imgs} w-100`}
-                src="../../aboutImg2.png"
+                src="../../aboutImg2.webp"
                 alt=""
               />
             </div>

@@ -8,12 +8,12 @@ export default function Home(props) {
   function onScroll() {
     let element = document.querySelector(".navbar");
     if (element) {
-      element.style.backgroundImage = "url('../../background2.jpg')";
+      element.style.backgroundImage = "url('../../background2.webp')";
     }
   }
   useEffect(() => {
     let element = document.querySelector(".navbar");
-    element.style.backgroundImage = "url('../../background2.jpg')";
+    element.style.backgroundImage = "url('../../background2.webp')";
     window.addEventListener("scroll", onScroll, { passive: true });
   }, []);
 
@@ -22,7 +22,7 @@ export default function Home(props) {
   }
   return (
     <div className={`${style.contpos}  h-100 w-100 d-flex align-items-center`} style={{
-        backgroundImage: `url('../../background2.jpg')`,
+        backgroundImage: `url('../../background2.webp')`,
     }}>
       <div className={` ${style.home} container pb-5 mt-5 `}>
         <div className="row gy-3 mt-2  w-100  pb-5">

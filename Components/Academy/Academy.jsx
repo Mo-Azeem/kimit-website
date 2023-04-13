@@ -17,7 +17,7 @@ export default function Academy({ cms_data }) {
           >
             {
               <div className={` w-100   pe-3`}>
-                <img className="w-100" src="../../academy.png" alt="" />
+                <img className="w-100" src="../../academy.webp" alt="" />
               </div>
             }
           </div>

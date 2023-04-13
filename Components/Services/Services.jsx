@@ -10,7 +10,7 @@ export default function Services(props) {
     let service = document.getElementById("service");
     if (service) {
       if (scrollY > service.scrollHeight && props.setBg == "dark") {
-        element.style.backgroundImage = "url('../../background2.jpg')";
+        element.style.backgroundImage = "url('../../background2.webp')";
       } else if (element) {
         element.style.backgroundImage = "none";
       }

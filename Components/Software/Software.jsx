@@ -38,7 +38,7 @@ export default function Software({ cms_data }) {
           <div className="col-lg-6 d-flex align-items-center justify-content-center pb-5">
             {
               <div className={`${style.mainImg}  w-100 mt-5`}>
-                <img className="w-100" src="../../software.png" alt="" />
+                <img className="w-100" src="../../software.webp" alt="" />
               </div>
             }
           </div>

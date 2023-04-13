@@ -17,7 +17,7 @@ export default function Nav(props) {
     let element = document.querySelector(".navbar");
 
     if (toggle % 2 == 0) {
-      element.style.cssText = "background-image: url('./background.png') !important;"
+      element.style.cssText = "background-image: url('../../background.webp') !important;"
       SetToggle(1)
     }
     else {
@@ -37,7 +37,7 @@ export default function Nav(props) {
     <>
       {service == "Tearm" ?
         <div id='home' className={`${style.container} position-relative home  w-100 h-100 `}>
-          <nav style={{ backgroundImage: `url("../../background2.jpg")` }} className="navbar navbar-expand-lg navbar-light position-fixed top-0    w-100">
+          <nav style={{ backgroundImage: `url("../../background.webp")` }} className="navbar navbar-expand-lg navbar-light position-fixed top-0    w-100">
             <div className="container-fluid text-center text-white">
               <Link href="/" onClick={() => clickhadler("home")}>
                   <img src="../logo.png" alt="logo" />
@@ -108,7 +108,7 @@ export default function Nav(props) {
             : ""}
         </div>
         :
-        <div style={{ backgroundImage: service ? `url("../../homeSoftware.png")` : `url("../../background.png")` }} id='home' className={`${style.container} position-relative home  w-100  `}>
+        <div style={{ backgroundImage: service ? `url("../../homeSoftware.png")` : `url("../../background.webp")` }} id='home' className={`${style.container} position-relative home  w-100  `}>
           <nav className="navbar navbar-expand-lg navbar-light position-fixed top-0  bg-transparent  w-100">
             <div className="container-fluid text-center text-white">
               <a href="#home"> <img src="../logo.png" alt="logo" style={{ cursor: "pointer" }} /></a>

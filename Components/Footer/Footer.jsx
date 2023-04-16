@@ -15,7 +15,8 @@ export default function Footer({ cms_data }) {
     router.push(`./${to}`);
   }
 
-  const { footer, contactUs } = cms_data;
+  const footer = cms_data?.footer;
+  const contactUs = cms_data?.contactUs;
 
   return (
     <div className={` ${style.body}  `}>

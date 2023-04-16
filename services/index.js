@@ -1,6 +1,5 @@
 import qs from "qs";
 
-
 const { NEXT_PUBLIC_STRAPI_API_URL } = process.env;
 const { STRAPI_API_TOKEN } = process.env;
 
@@ -46,9 +45,7 @@ const softwareServicesQuery = qs.stringify(
 
 const globalInfoQuery = qs.stringify(
   {
-    populate: [
-      "mainSeo",
-    ],
+    populate: ["mainSeo"],
   },
   {
     encodeValuesOnly: true,
@@ -65,24 +62,28 @@ export async function fetchSoftwarePage() {
   return await fetchCmsData(url);
 }
 
-export async function fetchGlobalInfo(){
+export async function fetchGlobalInfo() {
   const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/site-config?populate=*`;
   return await fetchCmsData(url);
 }
 
-export async function fetchFooter(){
+export async function fetchFooter() {
   const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/footer?populate[0]=linksSection.link`;
   return await fetchCmsData(url);
 }
 
-async function fetchCmsData(url) {
+export async function fetchTermsAndConditions() {
+  const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/static-pages/?filter[slug][$eq]=terms-and-conditions`;
+  const result = await fetchCmsData(url);
+  return result?.data?.[0]?.attributes;
+}
 
+async function fetchCmsData(url) {
   const response = await fetch(url, {
     headers: {
       Authorization: `Bearer ${STRAPI_API_TOKEN}`,
     },
   });
 
-  const data = await response.json();
-  return data;
+  return await response.json();
 }

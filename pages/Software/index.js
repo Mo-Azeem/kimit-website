@@ -6,29 +6,44 @@ import NumOfClients from "../../Components/NumOfClients/NumOfClients";
 import Portofolio from "../../Components/Portofolio/Portofolio";
 import ServiceSoftware from "../../Components/ServiceSoftware/ServiceSoftware";
 import SoftwareServiceHero from "../../Components/SoftwareServiceHero";
-import { fetchSoftwarePage } from "../../services";
+import { fetchSoftwarePage, fetchGlobalInfo, fetchFooter } from "../../services";
 
-export default function servicePage({ cms }) {
+export default function servicePage({ softwareService, contactUs, footer, academyPageLink }) {
   return (
     <>
-      <Navbar page={"Software"} service={"Tearm"} service2={"Portofolio"} />
-      <SoftwareServiceHero cms_data={cms?.Hero} />
-      <ServiceSoftware cms_data={cms?.OurServices} />
-      <NumOfClients cms_data={cms?.Stats} />
+      <Navbar page={"Software"} service={""} service2={"Portofolio"} academyPageLink={academyPageLink} />
+      <SoftwareServiceHero cms_data={softwareService?.Hero} />
+      <ServiceSoftware cms_data={softwareService?.OurServices} />
+      <NumOfClients cms_data={softwareService?.Stats} />
       {/* <MeetTeam /> */}
-      <Portofolio cms_data={cms?.OurPortfolio} />
-      <Footer />
+      <Portofolio cms_data={softwareService?.OurPortfolio} />
+      <Footer cms_data={{ footer, contactUs }} />
     </>
   );
 }
 
 export async function getStaticProps() {
   const { data } = await fetchSoftwarePage();
-  const cms = data?.attributes ? data?.attributes : null;
+  const { data: globalData_ } = await fetchGlobalInfo();
+  const { data: footerData } = await fetchFooter();
+  
+  const softwareService = data?.attributes ? data?.attributes : null;
+
+  const globalData = globalData_?.attributes ? globalData_.attributes : null;
+  const academyPageLink = globalData?.AcademyPageLink ? globalData.AcademyPageLink : null;
+  const socialLinks = globalData?.socialLinks ? globalData.socialLinks : null;
+  const companyInfo = globalData?.companyInfo ? globalData.companyInfo : null;
+  const footer = footerData?.attributes ? footerData.attributes : null;
 
   return {
     props: {
-      cms
+      softwareService,
+      contactUs: {
+        socialLinks,
+        companyInfo,
+      },
+      footer,
+      academyPageLink
     },
   };
 }

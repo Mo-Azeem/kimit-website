@@ -9,7 +9,8 @@ import { insta } from "../../Svgs/instgram";
 import { pine } from "../../Svgs/pine";
 import Image from "next/image";
 
-export default function Contact() {
+export default function Contact({ cms_data }) {
+  const { socialLinks, companyInfo } = cms_data;
   return (
     <div id="contact" className={`${style.body} pb-5`}>
       <div className="container">
@@ -94,24 +95,24 @@ export default function Contact() {
                     alt=""
                   />
                   <h6 className={`${style.data}  ps-2 `}>
-                    11 Moaz al Dawla, Makram Ebeid, Nasr City, Cairo.
+                    {companyInfo?.address}
                   </h6>
                 </div>
                 <div className="d-flex mt-2">
                   {message}
-                  <h6 className={`${style.data} ps-2`}>support@kimitin.com</h6>
+                  <h6 className={`${style.data} ps-2`}>{companyInfo?.email}</h6>
                 </div>
                 <div className="d-flex mt-2">
                   {phone}
-                  <h6 className={`${style.data} ps-2`}>01022554536</h6>
+                  <h6 className={`${style.data} ps-2`}>{companyInfo?.phone}</h6>
                 </div>
                 <div
                   className={`col-lg-6 d-flex justify-content-around w-75 m-auto ${style.icons} mt-3`}
                 >
-                  <span className="pe-2 ">{facebook}</span>
-                  <span className="pe-2">{twitter}</span>
-                  <span className="pe-2">{insta}</span>
-                  <span className="pe-2">{pine}</span>
+                  { socialLinks?.facebook && <span className="pe-2 "><a href={socialLinks.facebook}>{facebook}</a></span>}
+                  { socialLinks?.twitter && <span className="pe-2 "><a href={socialLinks.twitter}>{twitter}</a></span>}
+                  { socialLinks?.instagram && <span className="pe-2 "><a href={socialLinks.instagram}>{insta}</a></span>}
+                  { socialLinks?.linkedin && <span className="pe-2 "><a href={socialLinks.linkedin}>{pine}</a></span>}
                 </div>
               </div>
             </div>

@@ -1,13 +1,10 @@
 import React from "react";
 import style from "./Academy.module.css";
-import { softwareOne } from "../../Svgs/software1";
-import { softwareTwo } from "../../Svgs/software2";
-import { softwareThree } from "../../Svgs/software3";
 
 export default function Academy({ cms_data }) {
   return (
     <div
-      id="software"
+      id="academy"
       className={` ${style.softwareSec} w-100 h-100 bg-white pt-5 pb-5`}
     >
       <div className="container">

@@ -52,6 +52,7 @@
     padding-top: 30px;
     font-weight: bold;
     font-family: "semibold";
+    /* scroll-padding-top: 10rem; */
 }
 
 @media (max-width: 575px) {

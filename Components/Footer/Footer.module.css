@@ -19,9 +19,14 @@
 }
 
 .sec2 {
-    cursor: pointer;
     width: fit-content;
     white-space: nowrap;
+    display: block;
+}
+
+a.sec2:hover {
+    cursor: pointer;
+    color: #FFB606;
 }
 
 .sec2,

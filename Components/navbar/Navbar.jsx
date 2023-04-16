@@ -9,10 +9,9 @@ import Link from 'next/link'
 export default function Nav(props) {
   const router = useRouter()
   const [toggle, SetToggle] = useState(0)
-  const { service } = props;
-  const { service2 } = props;
-  const { page } = props;
+  const { academyPageLink, service, service2, page } = props;
   const [clicked, setClick] = useState(page)
+  console.log({page})
   function changeNav() {
     let element = document.querySelector(".navbar");
 
@@ -26,7 +25,7 @@ export default function Nav(props) {
     }
 
   }
-  function clickhadler(check) {
+  function clickHandler(check) {
     setClick(check)
   }
   function navigate(to) {
@@ -39,7 +38,7 @@ export default function Nav(props) {
         <div id='home' className={`${style.container} position-relative home  w-100 h-100 `}>
           <nav style={{ backgroundImage: `url("../../background.webp")` }} className="navbar navbar-expand-lg navbar-light position-fixed top-0    w-100">
             <div className="container-fluid text-center text-white">
-              <Link href="/" onClick={() => clickhadler("home")}>
+              <Link href="/" onClick={() => clickHandler("home")}>
                   <img src="../logo.png" alt="logo" />
 
 
@@ -50,39 +49,39 @@ export default function Nav(props) {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav m-auto d-flex  justify-content-center align-items-center  ">
                   <li className="nav-item position-relative">
-                    <Link onClick={() => clickhadler("home")} className="nav-link active text-white " aria-current="page" href="/">Home</Link>
+                    <Link onClick={() => clickHandler("home")} className="nav-link active text-white " aria-current="page" href="/">Home</Link>
                     {/* {clicked == "home" ?
                       <div className={`${style.line} position-absolute  start-0`}></div>
                       : ""
                     } */}
                   </li>
                   <li className="nav-item position-relative pt-1">
-                    <Link onClick={() => clickhadler("service")} className="nav-link active text-white " aria-current="page" href="/">Services</Link>
+                    <Link onClick={() => clickHandler("service")} className="nav-link active text-white " aria-current="page" href="/">Services</Link>
                     {clicked == "service" ?
                       <div className={`${style.line} position-absolute  start-0`}></div>
                       : ""}
                   </li>
                   <li className="nav-item position-relative pt-1">
-                    <Link onClick={() => clickhadler("about")} className="nav-link active text-white " aria-current="page" href="/">About Us</Link>
+                    <Link onClick={() => clickHandler("about")} className="nav-link active text-white " aria-current="page" href="/">About Us</Link>
                     {clicked == "about" ?
                       <div className={`${style.line} position-absolute  start-0`}></div>
                       : ""}
                   </li>
                   <li className="nav-item position-relative pt-1">
-                    <Link onClick={() => clickhadler("testmonial")} className="nav-link active text-white " aria-current="page" href="/">Testmonial  </Link>
+                    <Link onClick={() => clickHandler("testmonial")} className="nav-link active text-white " aria-current="page" href="/">Testmonial  </Link>
                     {clicked == "testmonial" ?
                       <div className={`${style.line} position-absolute  start-0`}></div>
                       : ""}
                   </li>
                   <li className="nav-item position-relative pt-1">
-                    <Link onClick={() => clickhadler("Software")} className="nav-link active text-white " aria-current="page" href="/Software">Software Serivce  </Link>
+                    <Link onClick={() => clickHandler("Software")} className="nav-link active text-white " aria-current="page" href="/Software">Software Serivce  </Link>
                     {clicked == "Software" ?
                       <div className={`${style.line} ${style.line2} position-absolute  start-0`}></div>
                       : ""}
                   </li>
 
                   <li className="nav-item position-relative pt-1">
-                    <Link onClick={() => clickhadler("contact")} className="nav-link active text-white " aria-current="page" href="/"> Contact Us</Link>
+                    <Link onClick={() => clickHandler("contact")} className="nav-link active text-white " aria-current="page" href="/"> Contact Us</Link>
                     {clicked == "contact" ?
                       <div className={`${style.line} position-absolute  start-0`}></div>
                       : ""}
@@ -118,39 +117,39 @@ export default function Nav(props) {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav m-auto d-flex  justify-content-center align-items-center  ">
                   <li className="nav-item position-relative pt-1">
-                    <a onClick={() => clickhadler("home")} className="nav-link active text-white " aria-current="page" href={`#home`}>Home</a>
+                    <Link onClick={() => clickHandler("home")} className="nav-link active text-white " aria-current="page" href="/#home">Home</Link>
                     {clicked == "home" ?
                       <div className={`${style.line} position-absolute  start-0`}></div>
                       : ""
                     }
                   </li>
                   <li className="nav-item position-relative pt-1">
-                    <a onClick={() => clickhadler("service")} className="nav-link active text-white " aria-current="page" href="#service">Services</a>
+                    <Link onClick={() => clickHandler("service")} className="nav-link active text-white " aria-current="page" href="/#service">Services</Link>
                     {clicked == "service" ?
                       <div className={`${style.line} position-absolute  start-0`}></div>
                       : ""}
                   </li>
                   <li className="nav-item position-relative pt-1">
-                    <a onClick={() => clickhadler("about")} className="nav-link active text-white " aria-current="page" href="#about">About Us</a>
+                    <Link onClick={() => clickHandler("about")} className="nav-link active text-white " aria-current="page" href="/#about">About Us</Link>
                     {clicked == "about" ?
                       <div className={`${style.line} position-absolute  start-0`}></div>
                       : ""}
                   </li>
                   <li className="nav-item position-relative pt-1">
-                    <a onClick={() => clickhadler("testmonial")} className="nav-link active text-white " aria-current="page" href="#testmonial">Testmonial</a>
+                    <Link onClick={() => clickHandler("testmonial")} className="nav-link active text-white " aria-current="page" href="/#testmonial">Testmonial</Link>
                     {clicked == "testmonial" ?
                       <div className={`${style.line} position-absolute  start-0`}></div>
                       : ""}
                   </li>
                   <li className="nav-item position-relative pt-1">
-                    <Link onClick={() => clickhadler("Software")} className="nav-link active text-white " aria-current="page" href="/Software">Software Serivce  </Link>
+                    <Link onClick={() => clickHandler("Software")} className="nav-link active text-white " aria-current="page" href="/Software">Software Serivce  </Link>
                     {clicked == "Software" ?
                       <div className={`${style.line} ${style.line2} position-absolute   start-0`}></div>
                       : ""}
                   </li>
 
                   <li className="nav-item position-relative pt-1">
-                    <a onClick={() => clickhadler("contact")} className="nav-link active text-white " aria-current="page" href="#contact"> Contact Us</a>
+                    <Link onClick={() => clickHandler("contact")} className="nav-link active text-white " aria-current="page" href="/#contact"> Contact Us</Link>
                     {clicked == "contact" ?
                       <div className={`${style.line} position-absolute  start-0`}></div>
                       : ""}
@@ -158,12 +157,12 @@ export default function Nav(props) {
                 </ul>
                 <div className=' d-flex w-100 btnsToggle pt-3 pb-3 justify-content-center '>
                   {/* <button onClick={() => navigate("Login")} className={`${style.loginBtn} btn`}>Log in</button> */}
-                  <button onClick={() => navigate("Academy")} className='signupBtn btn '>Academy</button>
+                  {academyPageLink && <Link href={academyPageLink} className='signupBtn btn '>Academy</Link>}
                 </div>
               </div>
               <div className='btnsNav d-flex '>
                 {/* <button onClick={() => navigate("Login")} className={`${style.loginBtn} btn`}>Log in</button> */}
-                <button onClick={() => navigate("Academy")} className='signupBtn btn '>Academy</button>
+                {academyPageLink && <Link href={academyPageLink} className='signupBtn btn '>Academy</Link>}
               </div>
             </div>
           </nav>

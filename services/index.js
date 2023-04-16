@@ -66,7 +66,12 @@ export async function fetchSoftwarePage() {
 }
 
 export async function fetchGlobalInfo(){
-  const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/site-config?${globalInfoQuery}`;
+  const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/site-config?populate=*`;
+  return await fetchCmsData(url);
+}
+
+export async function fetchFooter(){
+  const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/footer?populate[0]=linksSection.link`;
   return await fetchCmsData(url);
 }
 

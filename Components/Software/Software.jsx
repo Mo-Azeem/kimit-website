@@ -1,7 +1,4 @@
 import React from "react";
-import { softwareOne } from "../../Svgs/software1";
-import { softwareTwo } from "../../Svgs/software2";
-import { softwareThree } from "../../Svgs/software3";
 import style from "./Software.module.css";
 
 export default function Software({ cms_data }) {

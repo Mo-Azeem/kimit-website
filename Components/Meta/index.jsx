@@ -4,7 +4,7 @@ export default function Meta({ seo, pageTitle }) {
   return (
     <Head>
       <title>
-        {seo.seoTitle ?? "Kimit"}| {pageTitle}
+        {seo.seoTitle ?? "Kimit"} 
       </title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />

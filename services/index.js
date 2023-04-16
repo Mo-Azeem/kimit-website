@@ -73,9 +73,15 @@ export async function fetchFooter() {
 }
 
 export async function fetchTermsAndConditions() {
-  const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/static-pages/?filter[slug][$eq]=terms-and-conditions`;
+  const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/static-pages/terms-and-conditions`;
   const result = await fetchCmsData(url);
-  return result?.data?.[0]?.attributes;
+  return result?.data?.attributes;
+}
+
+export async function fetchPrivacyPolicy() {
+  const url = `${NEXT_PUBLIC_STRAPI_API_URL}/api/static-pages/privacy-policy`;
+  const result = await fetchCmsData(url);
+  return result?.data?.attributes;
 }
 
 async function fetchCmsData(url) {

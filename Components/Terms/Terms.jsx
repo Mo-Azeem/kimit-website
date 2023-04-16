@@ -3,6 +3,9 @@ import style from "./Tearms.module.css";
 import ReactMarkdown from "react-markdown";
 
 export default function Terms({ cms_data }) {
+  const date = new Date(cms_data?.updatedAt);
+  const formatedDate = Intl.DateTimeFormat("en-US").format(date)
+
   return (
     <div className={`${style.body} vh-100  w-100`}>
       <div
@@ -10,7 +13,7 @@ export default function Terms({ cms_data }) {
       >
         <h2 className={`${style.title}`}>Terms and condition</h2>
         {cms_data?.updatedAt && (
-          <h5 className={`${style.date}`}>Updated: {new Date(cms_data?.updatedAt).toLocaleDateString()}</h5>
+          <h5 className={`${style.date}`}>Updated: {formatedDate}</h5>
         )}
       </div>
       <div className={`${style.data}`}>

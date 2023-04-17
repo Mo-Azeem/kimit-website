@@ -11,7 +11,7 @@ export default function Nav(props) {
   const [toggle, SetToggle] = useState(0);
   const { academyPageLink, service, service2, page } = props;
   const [clicked, setClick] = useState(page);
-  console.log({ page });
+  // console.log({ page });
   function changeNav() {
     let element = document.querySelector(".navbar");
 

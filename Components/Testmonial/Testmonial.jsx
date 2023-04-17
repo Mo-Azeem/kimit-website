@@ -59,7 +59,7 @@ export default function Testmonial({ cms_data }) {
                           >
                             <div className={`${style.image} position-absolute`}>
                               <img
-                                src={customerImageUrl}
+                                src={customerImagePath}
                                 className="w-100 h-100"
                                 alt={testimonail?.Name + ' image'}
                               />
@@ -87,7 +87,7 @@ export default function Testmonial({ cms_data }) {
                               className={`${style.image} position-absolute `}
                             >
                               <img
-                                src={customerImageUrl}
+                                src={customerImagePath}
                                 className="w-100 h-100"
                               />
                             </div>

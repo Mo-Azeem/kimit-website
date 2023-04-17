@@ -54,7 +54,7 @@ function ServiceCard({ service }) {
     <div className="desc d-flex mb-4">
       {iconPath && (
         <div className="pe-4">
-          <img className={style.icon} src={iconUrl} alt="service" />
+          <img className={style.icon} src={iconPath} alt="service" />
         </div>
       )}
       <div className="imgDesc">

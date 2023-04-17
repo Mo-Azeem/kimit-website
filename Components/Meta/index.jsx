@@ -4,18 +4,18 @@ export default function Meta({ seo, pageTitle }) {
   return (
     <Head>
       <title>
-        {seo.seoTitle ?? "Kimit"} 
+        {seo?.seoTitle ?? "Kimit"} 
       </title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta
         name="description"
-        content={seo.seoDescription ?? "Kimit Innovation"}
+        content={seo?.seoDescription ?? "Kimit Innovation"}
       />
       <meta
         name="keywords"
-        content={seo.seokeywords ?? "Kimit Software House"}
+        content={seo?.seokeywords ?? "Kimit Software House"}
       />
 
       {/* <meta property="og:title" content="Orcabits | Custom Software Development Company" />

@@ -46,13 +46,13 @@ export default function Services(props) {
 function ServiceCard({ service }) {
   const NEXT_PUBLIC_STRAPI_API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
   const image = service?.Image?.data?.attributes?.url
-  const imageUrl = `${NEXT_PUBLIC_STRAPI_API_URL}${image}`
+  // const imageUrl = `${NEXT_PUBLIC_STRAPI_API_URL}${image}`
 
   return (
     <div className="col-lg-6 ">
       <div className={`${style.item} shadow bg-white`}>
         {image && (
-          <img src={imageUrl} className={`${style.img}`} alt="" />
+          <img src={image} className={`${style.img}`} alt="" />
         )}
         <h4 className={`${style.itemTitle}`}>{service?.Title}</h4>
         <h5 className={`${style.itemDesc}`}>

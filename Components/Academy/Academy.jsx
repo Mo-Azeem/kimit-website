@@ -59,7 +59,7 @@ function AcademyListItem({ item }) {
       <div className="pe-3">
         {iconPath && (
           <div className="pe-4">
-            <img className={style.icon} src={iconUrl} alt="academy list" />
+            <img className={style.icon} src={iconPath} alt="academy list" />
           </div>
         )}
       </div>

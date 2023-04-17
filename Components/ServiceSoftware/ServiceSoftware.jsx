@@ -32,7 +32,7 @@ function ServiceCard({ service }) {
         className={`${style.item} text-center shadow position-relative border-radius`}
       >
         {imagePath && (
-          <img className="pt-2" src={imageUrl} alt="service image" />
+          <img className="pt-2" src={imagePath} alt="service image" />
         )}
         <h5 className={`${style.title} pt-2`}>{service.Title}</h5>
         <p className={`${style.desc} pt-2 pb-5`}>{service.Paragraph}</p>

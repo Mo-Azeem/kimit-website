@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import Home from "../Home/Home";
-import Services from "../Services/Services";
-import Tearms from "../Terms/Terms";
 import style from "./Navbar.module.css";
 import { useRouter } from "next/router";
 import Link from "next/link";

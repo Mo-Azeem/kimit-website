@@ -1,5 +1,4 @@
 import Footer from "../../Components/Footer/Footer";
-import Home from "../../Components/Home/Home";
 import MeetTeam from "../../Components/MeetTeam/MeetTeam";
 import Navbar from "../../Components/navbar/Navbar";
 import NumOfClients from "../../Components/NumOfClients/NumOfClients";

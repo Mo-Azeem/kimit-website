@@ -3,8 +3,8 @@ import style from './Privacy.module.css'
 import ReactMarkdown from "react-markdown";
 
 export default function Privacy({cms_data}) {
-    const date = new Date(cms_data?.updatedAt);
-    const formatedDate = Intl.DateTimeFormat("en-US").format(date)
+    const date = cms_data?.updatedAt ? new Date(cms_data?.updatedAt) : null;
+    const formatedDate = date ? Intl.DateTimeFormat("en-US").format(date) : null
 
   return (
     <div className={`${style.body} vh-100  w-100`}>
